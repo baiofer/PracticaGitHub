@@ -12,14 +12,15 @@
 	Ahora tengo en el working copy el fichero git-nuestro modificado.
 	Con esto Rehago el último commit tal y como se solicita.
 - **¿El merge del paso 13 causó algún conflicto? ¿por qué?**
-	No causa ningún conflicto ya que se han descartado los cambios al
-	deshacer el commit con las variaciones y el fichero git-nuestro.md
-	no ha variado.
+	No causa ningún conflicto ya que la rama styled ya contiene a la rama master
+	en este punto del grafo. (master apunta al commit inicial y styled es el padre 
+	de este commit).
 - **¿El merge del paso 19 causó algún conflicto? ¿Por qué?**
-	No porque los cambios realizados en ambas ramas son los mismos y 
-	git no detecta diferencias.
+	Si porque el fichero git-nuestro de cada una de las ramas tiene modificaciones
+	distintas (la rama styled es markdown y la rama htmlify es html).
 - **¿El merge del paso 21 causó algún conflicto? ¿Por qué?**
-	Contestar
+	No porque styled ya contenia en su rama a master y al hacer el merge, es fast forward
+	y master simplemente sube en la rama hasta el último commit (el que es apuntado por styled.
 - **¿Que comando o comandos utilizaste en el paso 27?**
 	$git reset HEAD~1
 - **¿Que comando o comandos utilizaste en el paso 28?**
